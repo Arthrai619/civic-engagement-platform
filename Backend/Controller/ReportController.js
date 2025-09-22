@@ -33,7 +33,6 @@ const setReport = async (req, res) => {
 
     res.status(201).json({ data: report });
   } catch (error) {
-    console.error(error);
     res.status(500).json({ message: 'Server Error' });
   }
 };
