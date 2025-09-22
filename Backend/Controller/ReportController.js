@@ -1,4 +1,4 @@
-const Report = require('../models/reportModel');
+const Report = require('../Models/Report');
 
 // @desc Get all reports
 // @route GET /api/reports
