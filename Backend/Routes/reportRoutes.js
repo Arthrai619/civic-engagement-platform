@@ -1,7 +1,11 @@
-const { getReports, setReport } = require("../Controller/ReportController");
-const route = require("express").Router();
+const express = require('express');
+const router = express.Router();
+const {
+  getReports,
+  setReport,
+} = require('../Controller/ReportController');
+const upload = require('../middleware/uploadMiddleware'); // Import multer middleware
 
-route.get("/", getReports);
-route.post("/", setReport);
+router.route('/').get(getReports).post(upload.single('image'), setReport);
 
-module.exports = route;
+module.exports = router;
