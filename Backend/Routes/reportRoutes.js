@@ -1,8 +1,7 @@
-const  {getReport,postReport}= require("../Controller/ReportController")
+const { getReports, setReport } = require("../controllers/reportController");
+const route = require("express").Router();
 
-const route = require("express").Router()
+route.get("/", getReports);
+route.post("/", setReport);
 
-route.get("/",getReport)
-route.post("/",postReport)
-
-module.exports = route
+module.exports = route;
