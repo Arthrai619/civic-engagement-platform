@@ -1,4 +1,4 @@
-const { getReports, setReport } = require("../controllers/reportController");
+const { getReports, setReport } = require("../Controller/reportController");
 const route = require("express").Router();
 
 route.get("/", getReports);
